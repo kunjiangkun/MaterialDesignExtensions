@@ -541,7 +541,8 @@ namespace MaterialDesignExtensions.Controls
             try
             {
                 m_controller.SelectDirectory(newCurrentDirectory);
-                m_currentDirectoryTextBox.Text = newCurrentDirectory;
+                if (m_currentDirectoryTextBox != null)
+                    m_currentDirectoryTextBox.Text = newCurrentDirectory;
             }
             catch (PathTooLongException)
             {
